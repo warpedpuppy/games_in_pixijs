@@ -1,6 +1,0 @@
-src/registerServiceWorker.js
-node_modules/*
-public/*
-build/*
-config/*
-src/*.test.js
