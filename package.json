@@ -17,7 +17,8 @@
     "react-dom": "^16.12.0",
     "react-id-generator": "^3.0.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "set-value": "^3.0.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
