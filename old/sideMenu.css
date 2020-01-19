@@ -1,0 +1,132 @@
+.sideMenuFlexContainer {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+}
+.buttonDivCont {
+	position: relative;
+	width: 300px;
+	left: 0;
+/*	top: 120px;*/
+	transition: left 0.25s ease-in-out;
+	z-index: 4;
+}
+.buttonDivCont.hideMenu {
+  	left: -300px;
+	transition: left 0.25s ease-in-out;
+}
+.homeMenuButtonDiv {
+	display: flex;
+	flex-direction: column;
+	
+}
+.toggleSideMenu {
+	width: 20px;
+	height: 150px;
+	position: absolute;
+	right:-20px;
+	top: 0;
+	cursor: pointer;
+}
+
+
+.buttonDivCont .toggleSideMenu {
+	opacity: 0.75;
+	background: rgb(140,6,12);
+	background: linear-gradient(90deg, rgba(140,6,12,1) 0%, rgba(251,36,7,1) 47%, rgba(170,11,2,1) 100%);
+}
+.buttonDivCont.hideMenu .toggleSideMenu {
+	background: rgb(24,106,3);
+	background: linear-gradient(90deg, rgba(24,106,3,1) 0%, rgba(7,251,32,1) 47%, rgba(20,122,3,1) 100%);
+}
+
+.buttonDivCont .toggleSideMenu:hover, 
+.buttonDivCont.hideMenu .toggleSideMenu:hover {
+	/*border: 5px solid white;*/
+	opacity: 1;
+	transition: 0.25s;
+}
+
+.buttonDivCont .toggleSideMenu:active {
+	background: rgb(250,27,6);
+	background: linear-gradient(90deg, rgba(250,27,6,1) 0%, rgba(142,12,7,1) 47%, rgba(249,11,6,1) 100%);
+}
+
+.buttonDivCont.hideMenu .toggleSideMenu:active {
+	background: rgb(71,250,6);
+	background: linear-gradient(90deg, rgba(71,250,6,1) 0%, rgba(22,142,7,1) 47%, rgba(128,249,6,1) 100%);
+}
+
+.buttonDivCont .toggleSideMenu div.arrow  {
+  width: 0; 
+  height: 0; 
+  animation: mymove 2s infinite;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent; 
+  border-right:18px solid white; 
+  border-left: none;
+  
+}
+.buttonDivCont.hideMenu .toggleSideMenu div.arrow {
+  width: 0; 
+  height: 0; 
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid white;
+  border-right: none;
+}
+
+.homeMenuButton {
+	padding: 0;
+	margin:0;
+	font-size: 15px;
+	cursor: pointer;
+	display: block;
+	background-color: black;
+	color: white;
+	text-align: right;
+	height: 50px;
+	border-left: none;
+	position: relative;
+	overflow: hidden;
+}
+.homeMenuButton div {
+	background-color: #999999;
+	opacity: 0;
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+
+}
+.homeMenuButton span {
+	position: relative;
+	z-index: 400;
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 15px 20px 2px 2px;
+}
+.homeMenuButton:hover {
+	/*background-color: white;
+	color: black;
+	font-weight: bold;*/
+}
+.homeMenuButton:hover div {
+	opacity: 1;
+	transition: 0.25s;
+}
+
+@media (min-width: 1024px) {
+
+	/*.buttonDivCont {
+		position: fixed;
+		left: 0;
+		top: 100px;
+	}*/
+
+
+
+}

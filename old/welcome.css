@@ -1,0 +1,42 @@
+.welcomeDivOuter {
+	text-align: center;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100vw;
+	height:100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.welcomeDiv {
+	border:5px solid black;
+	background: rgba(255,255,255,0.5);
+	text-align: left;
+	
+	padding: 5px 15px;
+	border-radius: 20px;
+	display: inline-block;
+}
+/*.mobileOnlyWelcome {
+	padding-top: 200px;
+}*/
+.welcomeDiv p {
+	margin: 15px 0;
+	font-size: 25px;
+	font-weight: bold;
+}
+.welcomeDiv img {
+	display: block;
+	margin: 0 auto;
+}
+
+.welcomeDiv img {
+  animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  0% {opacity: 1;}
+  50% {opacity: 0.75;}
+  100% {opacity: 1;}
+}

@@ -1,0 +1,19 @@
+div.square {
+    /* border: 1px solid lightgray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.square-outer {
+    border: 5px solid black;
+    border-radius: 3px;
+    height: calc( 100% - 10px);
+    width:  calc( 100% - 10px);
+}
+.square-inner {
+   
+}
+
+@media (min-width: 1024px) {
+    
+}

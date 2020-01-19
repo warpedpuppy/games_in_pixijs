@@ -1,0 +1,58 @@
+.tempLogin {
+	background-color: black;
+	height:100vh;
+	width: 100vw;
+	padding-top: 50px;
+}
+.tempLogin .inner {
+	width: 50%;
+	margin: 0 auto;
+}
+.tempLogin .loginClick {
+	cursor: pointer;
+	color:white;
+	float:right;
+	margin-top: 10px;
+	color: #FF9900;
+	font-weight: bold;
+}
+.tempLogin .loginClick:hover {
+	color: #FF6600;
+}
+.tempLogin p {
+	color: white;
+	font-size: 25px;
+}
+.tempLogin img {
+	width: 150px;
+	position: relative;
+	left: -50px;
+}
+
+fieldset {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.tempLoginForm {
+	display: block;
+	border: 5px solid #FF00FF;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+.tempLoginForm input{
+	font-size: 12px;
+}
+
+
+@media screen and (min-width: 600px) {
+	.tempLogin .inner {
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	.tempLoginForm input{
+		font-size: 36px;
+	}
+}

@@ -1,0 +1,32 @@
+/*#game_canvas {
+	background-color: #333;
+	width: 100vw;
+	height: calc(100vh - 100px);
+}
+#game_canvas canvas {
+	position: relative;
+	z-index: 4999;
+}
+.colorPickerButton {
+	position: fixed;
+	top:50px;
+	right:5px;
+	z-index: 5002;
+}
+.colorPickerPanel {
+	position: fixed;
+	top:-25px;
+	right:-55px;
+	z-index: 5001;
+}
+
+.testPanel {
+	z-index: 20000;
+}
+.testPanel button {
+	cursor: pointer;
+	padding: 5px 10px;
+	border:1px solid black;
+	border-radius: 10px;
+	display:block;
+}*/

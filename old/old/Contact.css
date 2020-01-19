@@ -1,0 +1,44 @@
+.contactPage {
+	min-height: 100vh;
+	text-align: center;
+}
+.contactPage h1 {
+	color: green;
+}
+
+.contactPage .innerContact {
+	padding:5px 15px;
+	margin:150px auto;
+	background-color: rgba(255,255,255,0.5);
+	border:5px solid black;
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	font-weight: bold;
+	z-index: 1;
+}
+.innerContact p {
+	margin: 10px 0;
+	font-size: 10px;
+}
+.contactPage textarea {
+	width: 300px;
+	height: 100px;
+}
+
+.contactPage .tester {
+	height: 0;
+	width: 0;
+	font-size:0;
+	opacity: 0;
+}
+.contactPage .results {
+	color: green;
+	font-style:italic;
+}
+
+@media (min-width: 1024px) {
+
+
+}

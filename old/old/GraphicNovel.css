@@ -1,0 +1,22 @@
+.graphic-novel-shell {
+    text-align: center;
+}
+.pagination-shell-outer{
+    text-align: center;
+}
+.pagination-shell-inner {
+    display: inline-block;
+}
+.layout-shell {
+    display:inline-block;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1263px) {
+    .layout {
+        flex-direction: row;
+    }
+}

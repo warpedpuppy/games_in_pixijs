@@ -1,0 +1,112 @@
+.centerShell {
+	text-align: center;
+	position:absolute;
+	width:100%;
+	z-index: 9;
+}
+.formFeedback {
+	color: red;
+	font-style:italic;
+	font-weight: bold;
+}
+.LoginRegisterContainerDiv {
+	text-align: center;
+	position:relative;
+	width: 80%;
+	display: inline-block;
+	margin-top:100px;
+	border:none;
+	border-radius: 10px;
+}
+.LoginRegisterContainer {
+	border:5px solid black;
+	background-color: white;
+	padding:20px;
+	position: absolute;
+	top:0;
+	width:100%;
+	z-index: 10;
+	border-radius: 10px;
+}
+.LoginRegisterContainer a {
+	display: block;
+	cursor: pointer;
+	text-align: right;
+	font-style: italic;
+}
+
+.LoginRegisterContainer button.closeButton {
+	width:35px;
+	height:35px;
+	position: absolute;
+	right:0;
+	top:0;
+	padding:5px;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+	cursor: pointer;
+/*	border: 3px solid black;
+	border-radius: 5px;*/
+	background-color: transparent;
+	border:none;
+}
+.LoginRegisterContainer form input {
+	display:block;
+	width:100%;
+	border:3px solid black;
+	border-radius: 5px;
+	font-size: 20px;
+	margin:10px;
+	padding:3px;
+}
+.LoginRegisterContainer form input[type="submit"] {
+	display:inline-block;
+	width:auto;
+}
+.LoginRegisterContainer form div {
+	text-align: right;
+	margin:10px;
+	width:100%;
+}
+form button {
+	padding:5px 10px;
+	font-size:20px;
+	border-radius: 10px;
+	border:1px solid grey;
+	cursor: pointer;
+	outline:none;
+
+}
+@media (min-width: 1024px) {
+	.LoginRegisterContainerDiv {
+		width: auto;
+		margin-top:100px;
+		border:5px solid black;
+	}
+	.LoginRegisterContainer {
+		display: inline-block;
+		background-color: white;
+		padding:20px;
+		position:relative;
+		border: none;
+		border-radius: 3px;
+	}
+	.LoginRegisterContainer form input {
+		font-size: 30px;
+	}
+	.LoginRegisterContainer button.closeButton:hover img {
+		 animation-name: spin;
+	  animation-duration: 500ms;
+	  animation-iteration-count: infinite;
+	  animation-timing-function: linear; 
+	}
+
+	@keyframes spin {
+	    from {
+	        transform:rotate(0deg);
+	    }
+	    to {
+	        transform:rotate(360deg);
+	    }
+	}
+
+}

@@ -1,0 +1,16 @@
+.layout-2  .block-division {
+    flex-direction: column;
+}
+.layout-2  .block-division div div:not(.square) {
+    display: inline-block;
+}
+.layout-2  .block-division div div div {
+    float: left;
+}
+.layout-2  .block-division div div div:nth-child(odd) {
+    clear: left;
+}
+
+@media (min-width: 1263px) {
+
+}

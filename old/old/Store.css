@@ -1,0 +1,25 @@
+
+.storeCont {
+	background-color: #333;
+	text-align: center;
+	width: 80%;
+	padding-bottom: 500px;
+	margin:0 auto;
+	min-height: calc(100vh - 100px)
+}
+.storeCont h1 {
+	color: white;
+	font-weight: bold;
+}
+fieldset {
+	text-align: left;
+}
+fieldset legend {
+	color: white;
+	font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+
+
+}

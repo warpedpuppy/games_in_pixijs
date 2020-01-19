@@ -1,0 +1,27 @@
+.processingDiv {
+	background-color: white;
+	height:100%;
+	border:1px solid black;
+	top:0;
+	position: absolute;
+	width:100%;
+	z-index: 11;
+	text-align: center;
+	overflow: hidden;
+}
+.processingDiv > div{
+	width:400px;
+	margin: auto;
+	position: relative;
+	z-index: 30;
+}
+.processingDiv > h3{
+	position: relative;
+	z-index: 31;
+	font-weight: bold;
+	font-size:50px;
+	top:90px;
+}
+.processingDiv .svgDiv{
+	width:400px;
+}
