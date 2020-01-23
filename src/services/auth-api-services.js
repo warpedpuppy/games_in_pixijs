@@ -2,36 +2,38 @@ import config from '../config'
 import TokenService from './token-service'
 
 const AuthApiService = {
-  showLoginForm (code) {
-    return fetch(`${config.API_ENDPOINT}/auth/show-login-form`, {
+  async showLoginForm (code) {
+    const result = await fetch(`${config.API_ENDPOINT}/auth/show-login-form`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
       body: JSON.stringify({ code })
     })
-      .then((result) => result.json())
-      .then((resultJson) => resultJson)
+    const resultJson = await result.json()
+    return resultJson
   },
-  postLogin (password) {
-    return fetch(`${config.API_ENDPOINT}/auth/login`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify({ password })
-    })
-      .then((res) => ((!res.ok)
-        ? res.json().then((e) => Promise.reject(e))
-        : res.json()))
-      .then((res) => {
-        if (res.authToken) {
-          TokenService.saveAuthToken(res.authToken)
-          return { login: true }
-        }
-        return { login: false }
+  async postLogin (password) {
+    try {
+      const res = await fetch(`${config.API_ENDPOINT}/auth/login`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({ password })
       })
-      .catch((error) => error)
+      const res_1 = await ((!res.ok)
+        ? res.json().then((e) => Promise.reject(e))
+        : res.json())
+      if (res_1.authToken) {
+        TokenService.saveAuthToken(res_1.authToken)
+        return { login: true }
+      }
+      return { login: false }
+    }
+    catch (error) {
+      return error
+    }
   }
 
 }
