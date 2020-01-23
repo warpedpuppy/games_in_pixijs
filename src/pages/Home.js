@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import HomeButtons from '../animations/homeAnimations/home_buttons'
-
+import Spinners from '../components/Spinners';
 export default class Home extends React.Component {
 
 
@@ -11,6 +11,7 @@ export default class Home extends React.Component {
   }
   showButtons () {
     document.getElementById('home_page').style.display = "block";
+    document.getElementById('home-page-spinners').style.display = "none";
   }
 
   componentWillUnmount () {
@@ -28,9 +29,11 @@ export default class Home extends React.Component {
       this.gotoGame(game)
     }
   }
-
+  
   render () {
     return (
+      <React.Fragment>
+      <div id="home-page-spinners"><Spinners /></div>
       <div className="general-page-layout" id="home_page">
 
         <div className="home-page-buttons">
@@ -76,6 +79,7 @@ export default class Home extends React.Component {
 
         </div>
       </div>
+      </React.Fragment>
     )
   }
 }
