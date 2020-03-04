@@ -12,6 +12,7 @@ import MazeService from './services/maze-service'
 import TokenService from './services/token-service'
 import NotFound from './pages/NotFound'
 import LogoGraphic from './components/LogoGraphic'
+import Super8Movie from './pages/Super8Movie'
 
 export default class App extends React.Component {
   constructor (props) {
@@ -113,6 +114,7 @@ export default class App extends React.Component {
               <Route exact path="/fly-game" render={({ history }) => <CanvasFly history={history} />} />
               <Route exact path="/swim-game" render={({ history }) => <CanvasSwim history={history} />} />
               <Route exact path="/admin" component={Admin} />
+              <Route exact path="/super-8" component={Super8Movie} />
               <Route component={NotFound} />
             </Switch>
           </main>

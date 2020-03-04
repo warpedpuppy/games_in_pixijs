@@ -35,7 +35,7 @@ export default class Home extends React.Component {
       <React.Fragment>
       <div id="home-page-spinners"><Spinners /></div>
       <div className="general-page-layout" id="home_page">
-
+      
         <div className="home-page-buttons">
 
           <div
