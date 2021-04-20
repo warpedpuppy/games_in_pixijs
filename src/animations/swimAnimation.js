@@ -52,12 +52,12 @@ export default function () {
     showFPS: false,
     init (isMobile, isMobileOnly, id, parent) {
       this.id = id
-
-      if (!this.id) {
+      console.log("1", id)
+      if (this.id === undefined) {
         parent.redirectHome()
         return
       }
-
+      
       this.utils.root = this
       this.activeMode = this.mode[this.activeModeIndex]
       this.isMobile = isMobile
@@ -117,12 +117,15 @@ export default function () {
     async loadDB () {
       try {
         const res = await MazeServices.getOneMaze(this.id)
-        this.grid.boards = [...this.grid.boards, ...res]
-        this.buildGame()
+        if (res.result && res.result === "none") {
+          this.grid.boards = [...this.grid.boards, ...DefaultMaze]
+        } else {
+           this.grid.boards = [...this.grid.boards, ...res]
+        }
       } catch (e) {
         this.grid.boards = [...this.grid.boards, ...DefaultMaze]
-        this.buildGame()
       }
+      this.buildGame()
     },
     changeGrid (obj) {
       this.id = obj.id

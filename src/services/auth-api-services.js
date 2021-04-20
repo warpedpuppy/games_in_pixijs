@@ -25,6 +25,8 @@ const AuthApiService = {
       const res_1 = await ((!res.ok)
         ? res.json().then((e) => Promise.reject(e))
         : res.json())
+
+      console.log(res_1)
       if (res_1.authToken) {
         TokenService.saveAuthToken(res_1.authToken)
         return { login: true }

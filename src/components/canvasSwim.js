@@ -40,7 +40,8 @@ export default class CanvasSwim extends React.Component {
       this.context.setMazeGameAction(true)
       this.context.mazeGameHandler('swim')
       this.swim_game = swim_game()
-      if (this.context.activeMazeId) {
+
+      if (this.context.activeMazeId !== undefined) {
         this.swim_game.init(isMobile, isMobileOnly, this.context.activeMazeId, this)
       } else {
         MazeService.load_ids()
@@ -103,7 +104,7 @@ export default class CanvasSwim extends React.Component {
       this.pauseGame(this.context.mazeGameAction)
 
       const canvasClass = (isMobile) ? 'canvasParent isMobileOnly' : 'canvasParent'
-      if (this.context.activeMazeId) {
+      if (this.context.activeMazeId !== undefined) {
           if (!this.context.inGameMazeEdit) {
             return (
               <div className={canvasClass}>

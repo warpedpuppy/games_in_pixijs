@@ -49,8 +49,8 @@ export default function () {
     flyAnimate: FlyAnimate(),
     showFPS: false,
     init (isMobile, isMobileOnly, id, parent) {
-      this.id = id
-      if (!this.id) {
+      this.id = id;
+      if (this.id === undefined) {
         parent.redirectHome()
         return
       }
@@ -65,6 +65,7 @@ export default function () {
       if (!this.isMobile) {
         this.utils.getWidthAndHeight()
       } else {
+       
         const test1 = this.utils.returnCanvasWidth()
         const test2 = this.utils.returnCanvasHeight()
 
@@ -76,21 +77,22 @@ export default function () {
           this.orientationChange.makePortrait()
         }
       }
-
+     
       const app = this.app = Assets.Application(
         this.utils.canvasWidth,
         this.utils.canvasHeight,
         true
       )
+
       document.getElementById('homeCanvas').appendChild(app.view)
       this.stage = app.stage
       this.stage.addChild(this.kingCont)
-
+     
       if (this.showFPS) {
         this.fpsCounter = new PixiFps()
         this.fpsCounter.x = this.utils.canvasWidth - 75
       }
-
+     
       LoadingAnimation.start(this.kingCont)
 
       this.kingCont.addChild(this.filterContainer)
@@ -113,12 +115,15 @@ export default function () {
     async loadDB () {
       try {
         const res = await MazeServices.getOneMaze(this.id)
-        this.grid.boards = [...this.grid.boards, ...res]
-        this.buildGame()
+        if (res.result && res.result === "none") {
+          this.grid.boards = [...this.grid.boards, ...DefaultMaze]
+        } else {
+           this.grid.boards = [...this.grid.boards, ...res]
+        }
       } catch (e) {
         this.grid.boards = [...this.grid.boards, ...DefaultMaze]
-        this.buildGame()
       }
+      this.buildGame()
     },
     changeGrid (obj) {
       this.id = obj.id
@@ -139,6 +144,7 @@ export default function () {
       this.action = boolean
     },
     buildGame () {
+      console.log("build game")
       const { spritesheet } = this.loader.resources['/ss/ss.json']
 
       this.utils.setProperties({

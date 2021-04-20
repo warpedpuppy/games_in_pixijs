@@ -35,6 +35,7 @@ export default class CanvasFly extends React.Component {
         .then((ids) => {
           const activeMazeId = (ids[0]) ? ids[0].id : 0
           this.context.setIdsAndActiveMazeId(ids, activeMazeId )
+          console.log(activeMazeId)
           this.fly_anim.init(isMobile, isMobileOnly, activeMazeId, this)
         })
         .catch(error => error)
@@ -109,7 +110,7 @@ export default class CanvasFly extends React.Component {
       this.pauseGame(this.context.mazeGameAction)
 
       const canvasClass = (isMobile) ? 'canvasParent isMobileOnly' : 'canvasParent'
-      if (this.context.activeMazeId) {
+      if (this.context.activeMazeId !== undefined) {
           if (!this.context.inGameMazeEdit) {
             return (
               <div className={canvasClass}>

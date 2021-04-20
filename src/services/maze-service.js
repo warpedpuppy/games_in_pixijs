@@ -1,6 +1,6 @@
 import config from '../config'
 import TokenService from './token-service'
-
+import DefaultMaze from '../defaults/DefaultMaze';
 const MazeService = {
   async load_ids () {
     try {
@@ -30,6 +30,7 @@ const MazeService = {
       return res_1
     }
     catch (error) {
+      console.log()
       return error
     }
   },
@@ -49,7 +50,7 @@ const MazeService = {
     }
   },
   async saveMaze (data) {
-    console.log("save maze", data)
+    console.log("TokenService.getAuthToken()", TokenService.getAuthToken())
     try {
       const res = await fetch(`${config.API_ENDPOINT}/tugtug/new-maze`, {
         method: 'POST',
