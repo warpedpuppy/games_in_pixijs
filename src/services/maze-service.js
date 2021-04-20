@@ -49,6 +49,7 @@ const MazeService = {
     }
   },
   async saveMaze (data) {
+    console.log("save maze", data)
     try {
       const res = await fetch(`${config.API_ENDPOINT}/tugtug/new-maze`, {
         method: 'POST',

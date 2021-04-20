@@ -84,7 +84,7 @@ export default class NewGrid extends React.Component {
       this.setState({ feedback: '' })
 
       const obj = this.createObject()
-
+      console.log('save maze handler = ', obj)
       if (obj.hero && obj.token1 && obj.token2 && obj.token3 && obj.token4) {
         MazeService.saveMaze(obj)
           .then((res) => {
