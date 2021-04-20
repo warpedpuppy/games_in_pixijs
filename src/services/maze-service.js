@@ -30,7 +30,7 @@ const MazeService = {
       return res_1
     }
     catch (error) {
-      console.log()
+      console.log('get one maze error')
       return error
     }
   },
@@ -51,6 +51,8 @@ const MazeService = {
   },
   async saveMaze (data) {
     console.log("TokenService.getAuthToken()", TokenService.getAuthToken())
+    let body = JSON.stringify({ data })
+    console.log(body)
     try {
       const res = await fetch(`${config.API_ENDPOINT}/tugtug/new-maze`, {
         method: 'POST',
@@ -58,7 +60,7 @@ const MazeService = {
           'content-type': 'application/json',
           Authorization: `Bearer ${TokenService.getAuthToken()}`
         },
-        body: JSON.stringify({ data })
+        body
       })
       const res_1 = await res.json()
       if (res_1.success) {

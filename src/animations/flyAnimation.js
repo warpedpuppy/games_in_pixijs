@@ -144,7 +144,6 @@ export default function () {
       this.action = boolean
     },
     buildGame () {
-      console.log("build game")
       const { spritesheet } = this.loader.resources['/ss/ss.json']
 
       this.utils.setProperties({
