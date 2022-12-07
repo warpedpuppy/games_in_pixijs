@@ -31,7 +31,7 @@ const MazeService = {
     }
     catch (error) {
       console.log('get one maze error')
-      return error
+      return DefaultMaze; //error
     }
   },
   async loadAllMazes () {
