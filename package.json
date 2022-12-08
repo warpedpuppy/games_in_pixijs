@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gsap": "^1.20.4",
+    "gsap": "^3.6.0",
     "js-yaml": "^3.13.1",
     "jwt-decode": "^2.2.0",
     "mem": "^6.0.1",
